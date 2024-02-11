@@ -1,0 +1,2 @@
+- To compile Python to .so:
+  - g++ -std=c++11 -I/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/numpy/core/include -I/opt/homebrew/Cellar/opencv/4.9.0_2/include/opencv4 -I/Users/achakra/Documents/GitHub/PillIdentifier/libs/DataFrame/include -o pill_identifier.so -shared -fPIC bridge.c $(python3-config --cflags --ldflags) $(pkg-config --libs opencv4)
